@@ -1,0 +1,931 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,700|Playfair+Display";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100%;
+  zoom: 1;
+}
+body:before, body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+
+/* SlickNav Responsive Mobile Menu v1.0.8
+* (c) 2016 Josh Cope
+* licensed under MIT
+*/
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.6rem 0.8rem;
+  line-height: 1.125em;
+  cursor: pointer;
+}
+
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+  margin-top: 0.188em;
+}
+
+.slicknav_menu {
+  *zoom: 1;
+}
+
+.slicknav_menu .slicknav_menutxt {
+  display: block;
+  line-height: 1.188em;
+  float: left;
+}
+
+.slicknav_menu .slicknav_icon {
+  float: left;
+  width: 1.125em;
+  height: 0.875em;
+  margin: 0.188em 0 0 0.438em;
+}
+
+.slicknav_menu .slicknav_icon:before {
+  background: transparent;
+  width: 1.125em;
+  height: 0.875em;
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.slicknav_menu .slicknav_no-text {
+  margin: 0;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+  display: block;
+  width: 1.125em;
+  height: 0.125em;
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.slicknav_menu:before {
+  content: " ";
+  display: table;
+}
+
+.slicknav_menu:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.slicknav_nav {
+  clear: both;
+}
+
+.slicknav_nav ul {
+  display: block;
+}
+
+.slicknav_nav li {
+  display: block;
+  font-family: "Roboto", sans-serif;
+}
+
+.slicknav_nav .slicknav_arrow {
+  font-size: 0.8em;
+  margin: 0 0 0 0.4em;
+}
+
+.slicknav_nav .slicknav_item {
+  cursor: pointer;
+}
+
+.slicknav_nav .slicknav_item a {
+  display: inline;
+}
+
+.slicknav_nav .slicknav_row {
+  display: block;
+}
+
+.slicknav_nav a {
+  display: block;
+}
+
+.slicknav_nav .slicknav_parent-link a {
+  display: inline;
+}
+
+.slicknav_brand {
+  position: relative;
+  display: inline;
+  float: left;
+}
+.slicknav_brand img {
+  max-width: 100%;
+  max-height: 2.5rem;
+}
+
+.slicknav_menu {
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: #FFF;
+  padding: 5px;
+}
+
+.slicknav_menu * {
+  box-sizing: border-box;
+}
+
+.slicknav_menu .slicknav_menutxt {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #000;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #fff;
+}
+
+.slicknav_btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  background-color: #510e5e;
+}
+
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+  list-style: none;
+  overflow: hidden;
+}
+
+.slicknav_nav ul {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 0 20px;
+}
+
+.slicknav_nav .slicknav_row {
+  padding: 5px 10px;
+  margin: 2px 5px;
+}
+
+.slicknav_nav .slicknav_row:hover {
+  border-radius: 6px;
+  background: #ccc;
+  color: #fff;
+}
+
+.slicknav_nav a {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 2px 5px;
+  text-decoration: none;
+  color: #510e5e;
+}
+
+.slicknav_nav a:hover {
+  border-radius: 6px;
+  background: #510e5e;
+  color: #FFF;
+}
+
+.slicknav_nav .slicknav_txtnode {
+  margin-left: 1rem;
+}
+
+.slicknav_nav .slicknav_item a {
+  padding: 0;
+  margin: 0;
+}
+
+.slicknav_nav .slicknav_parent-link a {
+  padding: 0;
+  margin: 0;
+}
+
+.slicknav_brand {
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 7px 12px;
+  height: 44px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 766px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
+  padding: 0 1rem;
+}
+@media only screen and (max-width: 766px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.container-wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  clear: both;
+  padding: 0 1rem;
+}
+@media only screen and (max-width: 766px) {
+  .container-wide {
+    padding: 0;
+  }
+}
+
+.container-fluid {
+  display: block;
+  width: 100%;
+  clear: both;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.section-header {
+  margin-top: 6rem;
+}
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  color: #323232;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.1rem;
+}
+.section-header p {
+  text-align: justify;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6rem;
+  padding: 0 3rem;
+  word-wrap: break-word;
+}
+
+.partitions {
+  background-image: url("../img/partitions.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120px;
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #510e5e;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: 2px solid #510e5e;
+  text-decoration: none;
+  margin: 3rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+header {
+  position: relative;
+  background: url("../img/bg.jpg");
+  background-size: cover;
+}
+
+nav {
+  height: 4rem;
+  background-color: #FFF;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+@media only screen and (max-width: 1000px) {
+  nav {
+    display: none;
+  }
+}
+
+.logo {
+  position: relative;
+  display: inline;
+  float: left;
+  height: 2rem;
+  margin-left: 2rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo img {
+  max-width: 100%;
+  height: 2rem;
+}
+
+.main-menu {
+  transition: all 0.2s ease-in-out;
+  background-color: #FFF;
+  display: inline;
+  float: left;
+}
+.main-menu li {
+  display: inline-block;
+  text-align: center;
+}
+.main-menu li a {
+  text-decoration: none;
+  color: #787878;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 4rem;
+  padding: 0 3rem;
+  transition: all 0.2s ease-in-out;
+}
+.main-menu li a:hover {
+  color: #510e5e;
+}
+.main-menu li.active > a {
+  color: #510e5e;
+}
+
+.slicknav_menu {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .slicknav_menu {
+    display: block;
+  }
+}
+
+.nav-search {
+  position: relative;
+  display: inline;
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 2rem;
+}
+.nav-search input {
+  line-height: 24px;
+  border: 2px solid #DDD;
+  color: #787878;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 6px 6px 35px;
+  background: url("../img/search.png") no-repeat scroll 7px 7px;
+}
+.nav-search input:focus {
+  outline: none;
+}
+
+.header-image h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  color: #FFF;
+  padding: 15rem 0;
+}
+
+.flight-finder-outer {
+  position: relative;
+  zoom: 1;
+  padding: 0;
+}
+.flight-finder-outer:before, .flight-finder-outer:after {
+  content: "";
+  display: table;
+}
+.flight-finder-outer:after {
+  clear: both;
+}
+
+.flight-finder {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-50%);
+  background-color: #500e5e;
+  padding: 2rem 0rem;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+.flight-finder .col-3 {
+  display: inline;
+  float: left;
+  width: 80.70175%;
+  margin: 0 1.31579%;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 767px) {
+  .flight-finder .col-3 {
+    display: inline;
+    float: left;
+    width: 22.36842%;
+    margin: 0 1.31579%;
+  }
+}
+.flight-finder .col-2 {
+  display: inline;
+  float: left;
+  width: 80.70175%;
+  margin: 0 1.31579%;
+}
+@media only screen and (min-width: 767px) {
+  .flight-finder .col-2 {
+    display: inline;
+    float: left;
+    width: 14.03509%;
+    margin: 0 1.31579%;
+  }
+}
+.flight-finder .col-1 {
+  display: inline;
+  float: left;
+  width: 80.70175%;
+  margin: 0 1.31579%;
+}
+@media only screen and (min-width: 767px) {
+  .flight-finder .col-1 {
+    display: inline;
+    float: left;
+    width: 5.70175%;
+    margin: 0 1.31579%;
+  }
+}
+.flight-finder .field {
+  text-align: center;
+  position: relative;
+}
+.flight-finder .field i {
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.flight-finder .field .fa-calendar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.flight-finder .field .counter {
+  color: #FFF;
+  padding: 0.5rem 0.4rem 0.5rem 2.5rem;
+  line-height: 1rem;
+}
+.flight-finder input {
+  font-family: "Open Sans", sans-serif;
+  color: #FFF;
+}
+.flight-finder input::-webkit-input-placeholder {
+  color: #FFF;
+}
+.flight-finder input::-moz-placeholder {
+  color: #FFF;
+}
+.flight-finder input:-ms-input-placeholder {
+  color: #FFF;
+}
+.flight-finder input::placeholder {
+  color: #FFF;
+}
+.flight-finder input[type="text"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #7c4a86;
+  padding: 0.5rem 0.4rem;
+  color: #FFF;
+}
+.flight-finder input[type="text"]:focus {
+  outline: none;
+}
+.flight-finder input[type="date"] {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 0.4rem 0.5rem 2.5rem;
+  color: #FFF;
+}
+.flight-finder input[type="date"]:focus {
+  outline: none;
+}
+.flight-finder input[type="date"]::-webkit-inner-spin-button, .flight-finder input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.flight-finder input[type="number"] {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 0.4rem 0.5rem 2.5rem;
+  color: #FFF;
+}
+.flight-finder input[type="number"]:focus {
+  outline: none;
+}
+.flight-finder input[type="number"]::-webkit-inner-spin-button, .flight-finder input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.flight-finder input[type="number"]::-moz-inner-spin-button, .flight-finder input[type="number"]::-moz-outer-spin-button {
+  -moz-appearance: none;
+  margin: 0;
+}
+.flight-finder .arrow-right {
+  display: inline;
+  float: left;
+  width: 14.03509%;
+  margin: 0 1.31579%;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin: 0;
+  background-color: #69157a;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (min-width: 767px) {
+  .flight-finder .arrow-right {
+    display: inline;
+    float: left;
+    width: 5.70175%;
+    margin: 0 1.31579%;
+    margin: 0;
+  }
+}
+.flight-finder .arrow-right button {
+  background-color: inherit;
+  border: none;
+}
+.flight-finder .arrow-right i {
+  font-size: 3rem;
+  color: #FFF;
+}
+
+.cheapest-flights-icons {
+  zoom: 1;
+}
+.cheapest-flights-icons:before, .cheapest-flights-icons:after {
+  content: "";
+  display: table;
+}
+.cheapest-flights-icons:after {
+  clear: both;
+}
+.cheapest-flights-icons .col {
+  display: inline;
+  float: left;
+  width: 97.36842%;
+  margin: 0 1.31579%;
+  text-align: center;
+  padding: 5rem 0;
+}
+@media only screen and (min-width: 767px) {
+  .cheapest-flights-icons .col {
+    display: inline;
+    float: left;
+    width: 30.70175%;
+    margin: 0 1.31579%;
+  }
+}
+.cheapest-flights-icons img {
+  max-width: 100%;
+  height: 80px;
+}
+
+.popular-destinations {
+  text-align: center;
+}
+
+.destinations-gallery {
+  position: relative;
+  zoom: 1;
+  margin-top: 5rem;
+}
+.destinations-gallery:before, .destinations-gallery:after {
+  content: "";
+  display: table;
+}
+.destinations-gallery:after {
+  clear: both;
+}
+.destinations-gallery .col {
+  display: inline;
+  float: left;
+  width: 97.36842%;
+  margin: 0 1.31579%;
+}
+@media only screen and (min-width: 767px) {
+  .destinations-gallery .col {
+    display: inline;
+    float: left;
+    width: 47.36842%;
+    margin: 0 1.31579%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .destinations-gallery .col {
+    display: inline;
+    float: left;
+    width: 30.70175%;
+    margin: 0 1.31579%;
+  }
+}
+
+.destinations-item {
+  position: relative;
+  text-align: center;
+  padding-bottom: 5rem;
+  transition: all 0.2s ease-in-out;
+}
+.destinations-item div {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.27);
+}
+
+.destination-item-inner {
+  position: relative;
+  display: inline-block;
+  width: 12rem;
+  height: 12rem;
+}
+.destination-item-inner .destination-item-content {
+  z-index: 9;
+  background-color: #EBEBEB;
+}
+.destination-item-inner .destination-item-content i {
+  font-size: 2rem;
+  line-height: 12rem;
+  color: #9A9999;
+}
+.destination-item-inner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.destination-item-inner div:nth-child(2) {
+  background-color: #E1E1E1;
+  transform: rotate(-5deg);
+  z-index: 8;
+}
+.destination-item-inner div:nth-child(3) {
+  background-color: #EBEBEB;
+  transform: rotate(-10deg);
+  z-index: 7;
+}
+
+.customers-hearth-line {
+  display: block;
+  height: 4rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.customers-hearth-line .hearth {
+  display: inline;
+  float: left;
+  width: 14.03509%;
+  margin: 0 1.31579%;
+}
+.customers-hearth-line .hearth i {
+  font-size: 4rem;
+  color: #510e5e;
+}
+.customers-hearth-line .line {
+  display: inline;
+  float: left;
+  width: 39.03509%;
+  margin: 0 1.31579%;
+  border-bottom: 3px solid #510e5e;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.customers-gallery {
+  zoom: 1;
+  display: block;
+  width: 102.63158%;
+  margin: 0 -1.31579%;
+  zoom: 1;
+  padding: 5rem 0;
+}
+.customers-gallery:before, .customers-gallery:after {
+  content: "";
+  display: table;
+}
+.customers-gallery:after {
+  clear: both;
+}
+.customers-gallery:before, .customers-gallery:after {
+  content: "";
+  display: table;
+}
+.customers-gallery:after {
+  clear: both;
+}
+.customers-gallery .col {
+  height: calc(0.22 * 100vw);
+}
+@media only screen and (max-width: 766px) {
+  .customers-gallery .col {
+    height: 60vh;
+  }
+}
+.customers-gallery .col:nth-child(1) {
+  background: url("../img/customers-2.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: inline;
+  float: left;
+  width: 5.70175%;
+  margin: 0 1.31579%;
+}
+@media only screen and (min-width: 767px) {
+  .customers-gallery .col:nth-child(1) {
+    display: inline;
+    float: left;
+    width: 22.36842%;
+    margin: 0 1.31579%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .customers-gallery .col:nth-child(1) {
+    display: inline;
+    float: left;
+    width: 34.86842%;
+    margin: 0 1.31579%;
+  }
+}
+.customers-gallery .col:nth-child(2) {
+  background: url("../img/customers-3.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: inline;
+  float: left;
+  width: 80.70175%;
+  margin: 0 1.31579%;
+  border: 5px solid #B3B3B3;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.27);
+  height: calc(0.22 * 100vw + 10px);
+  margin-top: -5px;
+}
+@media only screen and (max-width: 766px) {
+  .customers-gallery .col:nth-child(2) {
+    height: calc(60vh + 10px);
+  }
+}
+@media only screen and (min-width: 767px) {
+  .customers-gallery .col:nth-child(2) {
+    display: inline;
+    float: left;
+    width: 47.36842%;
+    margin: 0 1.31579%;
+    margin-top: -10px;
+    border: 10px solid #B3B3B3;
+    height: calc(0.22 * 100vw + 20px);
+    margin-top: -10px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .customers-gallery .col:nth-child(2) {
+    display: inline;
+    float: left;
+    width: 22.36842%;
+    margin: 0 1.31579%;
+    margin-top: -10px;
+  }
+}
+.customers-gallery .col:nth-child(3) {
+  background: url("../img/customers-1.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: inline;
+  float: left;
+  width: 5.70175%;
+  margin: 0 1.31579%;
+}
+@media only screen and (min-width: 767px) {
+  .customers-gallery .col:nth-child(3) {
+    display: inline;
+    float: left;
+    width: 22.36842%;
+    margin: 0 1.31579%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .customers-gallery .col:nth-child(3) {
+    display: inline;
+    float: left;
+    width: 34.86842%;
+    margin: 0 1.31579%;
+  }
+}
+
+.experience {
+  text-align: center;
+}
+.experience span {
+  font-family: "Playfair Display", serif;
+  font-size: 8rem;
+  color: #510e5e;
+}
+.experience h3 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 4rem;
+  color: #787878;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+
+footer {
+  text-align: center;
+}
+footer img {
+  height: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

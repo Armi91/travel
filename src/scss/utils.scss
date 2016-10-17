@@ -1,0 +1,86 @@
+@mixin mobile{
+	@media only screen and (max-width: 766px){
+		@content;
+	}
+}
+
+@mixin tablet{
+	@media only screen and (min-width: 767px){
+		@content;
+	}
+}
+
+@mixin desktop{
+	@media only screen and (min-width: 1100px){
+		@content;
+	}
+}
+
+@mixin navigation{
+	@media only screen and (max-width: 1000px){
+		@content;
+	}
+}
+
+// fonts
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,700|Playfair+Display';
+
+$open-sans: 'Open Sans', sans-serif;
+$fairplay: 'Playfair Display', serif;
+$roboto: 'Roboto', sans-serif;
+
+// kolory
+
+$basic-bg-color: #FFF;
+$text-color: #323232;
+$dark-violet-color: #510e5e;
+$violet-color: #750889;
+$gray-color: #787878;
+$dark-gray-color: #464545;
+
+
+// siatka kolumn
+$columns: 12;
+$column-width: 65;
+$gutter-width: 30;
+$total-width: 100%;
+
+@mixin center-vertical(){
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin transition($t:0.2s){
+	transition: all $t ease-in-out;
+}
+
+@mixin header-mixin($header-font-size,$header-margin-bottom,$header-color: $text-color){
+	font-size: $header-font-size;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: $header-margin-bottom;
+	color: $header-color;
+	font-weight: 400;
+}
+
+@mixin section-border-bottom($border-color: $basic-border-color){
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: $border-color;
+	box-shadow: 0 1px 1px $basic-border-color;
+}
+
+@mixin button{
+	font-family: $open-sans;
+	font-size: 1rem;
+	font-weight: bold;
+	color: $dark-violet-color;
+	background-color: transparent;
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+	border: 2px solid $dark-violet-color;
+	text-decoration: none;
+}

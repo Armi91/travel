@@ -1,0 +1,499 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	@include mobile{
+		font-size: 75%;
+	}
+}
+
+body{
+	position: relative;
+	margin: 0;
+}
+
+// general
+
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
+	padding: 0 1rem;
+	@include mobile{
+		padding: 0;
+	}
+}
+
+.container-wide{
+	max-width: 1200px;
+	margin: 0 auto;
+	clear: both;
+	padding: 0 1rem;
+	@include mobile{
+		padding: 0;
+	}
+}
+
+.container-fluid{
+	display: block;
+	width: 100%;
+	clear: both;
+	margin: 0;
+	overflow-x: hidden;
+
+}
+
+.section-header{
+	margin-top: 6rem;
+	h2{
+		@include header-mixin(2.5rem, 2rem);
+		text-align: center;
+		font-family: $fairplay;
+		letter-spacing: 0.1rem;
+	}
+	p{
+		text-align: justify;
+		text-align-last: center;
+		font-family: $open-sans;
+		line-height: 1.6rem;
+		padding: 0 3rem;
+		word-wrap: break-word;
+	}
+}
+
+.partitions{
+	background-image: url('../img/partitions.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 120px;
+}
+
+.btn{
+	@include button;
+	margin: 3rem 0;
+	position: relative;
+	display: inline-block;
+}
+
+// header
+
+header{
+	position: relative;
+	background: url('../img/bg.jpg');
+	background-size: cover;
+}
+
+nav{
+	height: 4rem;
+	background-color: $basic-bg-color;
+	width: 100%;
+	position: relative;
+	display: block;
+	@include navigation{
+		display: none;
+	}
+}
+
+.logo{
+	position: relative;
+	display: inline;
+	float: left;
+	height: 2rem;
+	margin-left: 2rem;
+	@include center-vertical;
+	img{
+		max-width: 100%;
+		height: 2rem;
+	}
+}
+
+.main-menu{
+	@include transition;
+	background-color: $basic-bg-color;
+	display: inline;
+	float: left;
+	li{
+		display: inline-block;
+		text-align: center;
+		a{
+			text-decoration: none;
+			color: $gray-color;
+			font-family: $roboto;
+			font-size: 1rem;
+			line-height: 4rem;
+			padding: 0 3rem;
+			@include transition;
+			&:hover{
+				color: $dark-violet-color;
+			}
+		}
+	}
+	li.active > a{
+		color: $dark-violet-color
+	}
+}
+
+.slicknav_menu {
+	display:none;
+	@include navigation{
+		display: block;
+	}
+}
+
+.nav-search{
+	position: relative;
+	display: inline;
+	float: right;
+	@include center-vertical;
+	margin-right: 2rem;
+	input{
+		line-height: 24px;
+		border: 2px solid #DDD;
+		color: $gray-color;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 6px 6px 6px 35px;
+		background: url('../img/search.png') no-repeat scroll 7px 7px;
+		&:focus{
+			outline: none;
+		}
+	}
+}
+
+.header-image{
+	h1{
+		font-family: $fairplay;
+		font-size: 6rem;
+		color: #FFF;
+		padding: 15rem 0;
+		@include tablet{
+			// margin-left: 2rem;
+		}
+	}
+}
+
+.flight-finder-outer{
+	position: relative;
+	@include clearfix();
+	padding: 0;
+}
+
+.flight-finder{
+	position: absolute;
+	width: 100%;
+	transform: translateY(-50%);
+	background-color: #500e5e;
+	padding: 2rem 0rem;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+	.col-3{
+		@include column(10);
+		margin-bottom: 1rem;
+		@include tablet{
+			@include column(3);
+		}
+	}
+	.col-2{
+		@include column(10);
+		@include tablet{
+			@include column(2);
+		}
+	}.col-1{
+		@include column(10);
+		@include tablet{
+			@include column(1);
+		}
+	}
+	.field{
+		text-align: center;
+		position: relative;
+		i{
+			color: #FFF;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.fa-calendar{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.counter{
+			color: #FFF;
+			padding: 0.5rem 0.4rem 0.5rem 2.5rem;
+			line-height: 1rem;
+		}
+	}
+
+	input{
+		font-family: $open-sans;
+		color: #FFF;
+		&::placeholder{
+			color: #FFF;
+		}
+	}
+
+	input[type="text"]{
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid #7c4a86;
+		padding: 0.5rem 0.4rem;
+		color: $basic-bg-color;
+		&:focus{
+			outline: none;
+		}
+	}
+	input[type="date"]{
+		background-color: transparent;
+		border: none;
+		padding: 0.5rem 0.4rem 0.5rem 2.5rem;
+		color: $basic-bg-color;
+		&:focus{
+			outline: none;
+		}
+		&::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+	input[type="number"]{
+		text-align: center;
+		position: relative;
+		width: 100%;
+		background-color: transparent;
+		border: none;
+		padding: 0.5rem 0.4rem 0.5rem 2.5rem;
+		color: $basic-bg-color;
+		&:focus{
+			outline: none;
+		}
+		&::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+			-webkit-appearance: none;
+			margin: 0;
+		}
+		&::-moz-inner-spin-button, &::-moz-outer-spin-button{
+			-moz-appearance: none;
+			margin: 0;
+		}
+	}
+	.arrow-right{
+		@include column(2);
+		display: none;
+		@include tablet{
+			@include column(1);
+			margin: 0;
+		}
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		margin: 0;
+		background-color: #69157a;
+		box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+		button{
+			background-color: inherit;
+			border: none;
+		}
+		i{
+			font-size: 3rem;
+			color: #FFF;
+		}
+	}
+}
+
+// Sekcja cheapest flights
+
+.cheapest-flights-icons{
+	@include clearfix();
+	.col{
+		@include column(12);
+		@include tablet{
+			@include column(4);
+		}
+		text-align: center;
+		padding: 5rem 0;
+	}
+	img{
+		max-width: 100%;
+		height: 80px;
+	}
+}
+
+// sekcja popular destinations
+
+.popular-destinations{
+	text-align: center;
+}
+
+.destinations-gallery{
+	position: relative;
+	@include clearfix;
+	margin-top: 5rem;
+	.col{
+		@include column(12);
+		@include tablet{
+			@include column(6);
+		}
+		@include desktop{
+			@include column(4);
+		}
+	}
+}
+
+.destinations-item{
+	position: relative;
+	text-align: center;
+	padding-bottom: 5rem;
+	@include transition();
+	div{
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.27);
+	}
+}
+
+.destination-item-inner{
+	position: relative;
+	display: inline-block;
+	width: 12rem;
+	height: 12rem;
+	.destination-item-content{
+		z-index:9;
+		background-color: #EBEBEB;
+		i{
+			font-size: 2rem;
+			line-height: 12rem;
+			color: #9A9999;
+		}
+	}
+
+	div{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left:0;
+		&:nth-child(2){
+			background-color: #E1E1E1;
+			transform: rotate(-5deg);
+			z-index: 8;
+		}
+		&:nth-child(3){
+			background-color: #EBEBEB;
+			transform: rotate(-10deg);
+			z-index: 7;
+		}
+	}
+}
+// sekcja customers
+
+.customers{
+	.section-header{
+		h2{
+		}
+	}
+}
+
+.customers-hearth-line{
+	display: block;
+	height: 4rem;
+	position: relative;
+	text-align: center;
+	margin-bottom: 2rem;
+	.hearth{
+		@include column(2);
+		i{
+			font-size: 4rem;
+			color: $dark-violet-color;
+		}
+	}
+	.line{
+		@include column(5);
+		border-bottom: 3px solid $dark-violet-color;
+		@include center-vertical;
+	}
+}
+
+.customers-gallery{
+	@include clearfix;
+	@include row;
+	padding: 5rem 0;
+	.col{
+		height: calc(0.22 * 100vw);
+		@include mobile{
+			height: 60vh;
+		}
+		&:nth-child(1){
+			background: url('../img/customers-2.jpg');
+			background-size: cover;
+			background-position: center center;
+			@include column(1);
+			@include tablet{
+				@include column(3);
+			}
+			@include desktop(){
+				@include column(4.5);
+			}
+		}
+		&:nth-child(2){
+			background: url('../img/customers-3.jpg');
+			background-size: cover;
+			background-position: center center;
+			@include column(10);
+			border: 5px solid #B3B3B3;
+			box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.27);
+			height: calc(0.22 * 100vw + 10px);
+			margin-top: -5px;
+			@include mobile{
+				height: calc(60vh + 10px);
+			}
+			@include tablet{
+				@include column(6);
+				margin-top: -10px;
+				border: 10px solid #B3B3B3;
+				height: calc(0.22 * 100vw + 20px);
+				margin-top: -10px;
+			}
+			@include desktop(){
+				@include column(3);
+				margin-top: -10px;
+			}
+
+		}
+		&:nth-child(3){
+			background: url('../img/customers-1.jpg');
+			background-size: cover;
+			background-position: center center;
+			@include column(1);
+			@include tablet{
+				@include column(3);
+			}
+			@include desktop(){
+				@include column(4.5);
+			}
+		}
+	}
+}
+
+// sekcja experience
+
+.experience{
+	text-align: center;
+	span{
+		font-family: $fairplay;
+		font-size: 8rem;
+		color: $dark-violet-color;
+	}
+	h3{
+		@include header-mixin(2.5rem, 4rem, $gray-color);
+		font-family: $fairplay;
+	}
+}
+
+// footer
+
+footer {
+	text-align: center;
+	img{
+		height: 50%;
+		@include center-vertical;
+	}
+}
